@@ -20,96 +20,86 @@ class BMI extends StatelessWidget {
       child: Container(
         color: Colors.white,
         padding: const EdgeInsets.all(15),
-        child: Column(
+        child: ListView(
           children: [
-            Expanded(
-              flex: 3,
-              child: Row(children: [
-                gender_method(context, "male"),
-                gender_method(context, "female"),
-              ]),
-            ),
-            Expanded(
-              flex: 3,
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: const Color(0x964F9C7E)),
-                      margin: const EdgeInsets.all(10),
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Height",
-                              style: TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold)),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("${height.toStringAsFixed(2)}",
-                                  style: const TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white)),
-                              const Text("  cm",
-                                  style: TextStyle(
-                                    fontSize: 20,
+            Row(children: [
+              gender_method(context, "male"),
+              gender_method(context, "female"),
+            ]),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    height: 180,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: const Color(0x964F9C7E)),
+                    margin: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text("Height",
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.bold)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("${height.toStringAsFixed(2)}",
+                                style: const TextStyle(
+                                    fontSize: 40,
                                     fontWeight: FontWeight.bold,
-                                  ))
-                            ],
-                          ),
-                          Slider(
-                              activeColor: const Color(0x960B473B),
-                              inactiveColor: const Color(0x964F9C7E),
-                              min: 0.0,
-                              max: 200.0,
-                              value: height,
-                              onChanged: (newval) {
-                                sliderfunction(newval);
-                              })
-                        ],
-                      ),
+                                    color: Colors.white)),
+                            const Text("  cm",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ))
+                          ],
+                        ),
+                        Slider(
+                            activeColor: const Color(0x960B473B),
+                            inactiveColor: const Color(0x964F9C7E),
+                            min: 20.0,
+                            max: 200.0,
+                            value: height,
+                            onChanged: (newval) {
+                              sliderfunction(newval);
+                            })
+                      ],
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            Expanded(
-              flex: 3,
-              child: Row(
-                children: [
-                  weight_age_method(context, "weight"),
-                  weight_age_method(context, "age"),
-                ],
-              ),
+
+            Row(
+              children: [
+                weight_age_method(context, "weight"),
+                weight_age_method(context, "age"),
+              ],
             ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: ElevatedButton(
-                        style: const ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Color(0x960B473B)),
-                          padding: MaterialStatePropertyAll(EdgeInsets.all(15)),
-                        ),
-                        onPressed: () {
-                          start();
-                        },
-                        child: const Text(
-                          "Calculate",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30),
-                        )),
-                  )
-                ],
-              ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: ElevatedButton(
+                      style: const ButtonStyle(
+                        backgroundColor:
+                            MaterialStatePropertyAll(Color(0x960B473B)),
+                        padding: MaterialStatePropertyAll(EdgeInsets.all(15)),
+                      ),
+                      onPressed: () {
+                        start();
+                      },
+                      child: const Text(
+                        "Calculate",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30),
+                      )),
+                )
+              ],
             ),
           ],
         ),
@@ -121,6 +111,7 @@ class BMI extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
+        height:200,
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
@@ -140,31 +131,16 @@ class BMI extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ElevatedButton(
-                    style: const ButtonStyle(
-                      minimumSize: MaterialStatePropertyAll(Size(50, 50)),
-                      shape: MaterialStatePropertyAll(CircleBorder()),
-                      backgroundColor: MaterialStatePropertyAll(
-                        Color(0x96144A3A),
-                      ),
-                      elevation: MaterialStatePropertyAll(5),
-                      shadowColor: MaterialStatePropertyAll(Colors.black),
-                    ),
+                FloatingActionButton(
+                  backgroundColor:  Color(0x96144A3A),
+
                     onPressed: () {
                       Type == "weight" ? weightfunction(1) : agefunction(1);
                     },
                     child:
                         const Icon(Icons.add, size: 25, color: Colors.white)),
-                ElevatedButton(
-                    style: const ButtonStyle(
-                      minimumSize: MaterialStatePropertyAll(Size(50, 50)),
-                      shape: MaterialStatePropertyAll(CircleBorder()),
-                      backgroundColor: MaterialStatePropertyAll(
-                        Color(0x96144A3A),
-                      ),
-                      elevation: MaterialStatePropertyAll(5),
-                      shadowColor: MaterialStatePropertyAll(Colors.black),
-                    ),
+                FloatingActionButton(
+                    backgroundColor:   Color(0x96144A3A),
                     onPressed: () {
                       Type == "weight" ? weightfunction(-1) : agefunction(-1);
                     },
@@ -182,11 +158,12 @@ class BMI extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
+        height: 200,
         margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: Type == "male" ? gendercolormale : gendercolorfemale),
-        child: InkWell(
+        child:GestureDetector(
           onTap: () {
             if (Type == "male") {
               genderfunction("male");

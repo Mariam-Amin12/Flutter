@@ -56,7 +56,7 @@ class _myAppState extends State<myApp> {
       gender = "";
       gendercolormale = const Color(0x964F9C7E);
       gendercolorfemale = const Color(0x964F9C7E);
-      height = 0.0;
+      height = 20.0;
       Weight = 20;
       age = 10;
       Calculate = false;

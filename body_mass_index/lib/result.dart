@@ -26,59 +26,51 @@ class Data extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
             color: const Color(0x964F9C7E)),
-        child: Column(
+        child: ListView(
           children: [
-            Expanded(
-              flex: 5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        result_method(context, "age"),
-                        result_method(context, "weight"),
-                        result_method(context, "height"),
-                        result_method(context, "gender"),
-                        Card(
-                          elevation: 5,
-                          shadowColor: const Color(0x9601273B),
-                          child: Text(
-                            fun(),
-                            style: const TextStyle(
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0x9601273B)),
-                          ),
-                        )
-                      ]),
-                ],
-              ),
+            Container(
+              margin: EdgeInsets.only (top:70),
+              height: 400,
+              child:
+                Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      result_method(context, "age"),
+                      result_method(context, "weight"),
+                      result_method(context, "height"),
+                      result_method(context, "gender"),
+                      Card(
+                        elevation: 5,
+                        shadowColor: const Color(0x9601273B),
+                        child: Text(
+                          fun(),
+                          style: const TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0x9601273B)),
+                        ),
+                      )
+                    ]),
+
             ),
-            Expanded(
-                flex: 1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Builder(builder: (context) {
-                      return ElevatedButton(
-                          style: const ButtonStyle(
-                            backgroundColor:
-                                MaterialStatePropertyAll(Color(0x960B473B)),
-                            padding:
-                                MaterialStatePropertyAll(EdgeInsets.all(15)),
-                          ),
-                          onPressed: () {
-                            reset();
-                          },
-                          child: const Text(
-                            "Again",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 30),
-                          ));
-                    }),
-                  ],
-                ))
+            Container(
+
+              child: ElevatedButton(
+                  style: const ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Color(0x960B473B)),
+                    padding:
+                        MaterialStatePropertyAll(EdgeInsets.all(15)),
+                  ),
+                  onPressed: () {
+                    reset();
+                  },
+                  child: const Text(
+                    "Again",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 30),
+                  )),
+            )
           ],
         ),
       ),

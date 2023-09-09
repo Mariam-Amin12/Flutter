@@ -32,4 +32,3 @@ To run the Quiz app on your device, follow these steps:
    flutter pub get
 
    flutter run
-```

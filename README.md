@@ -6,21 +6,9 @@ Welcome to the Flutter Projects Showcase! This repository contains a collection 
 
 ### Project 1: QuizApp
 
-Screenshots:
-![Project 1 Screenshot 1]()
-![Project 1 Screenshot 2]()
-
 ### Project 2: BMI
 
-Screenshots:
-![Project 2 Screenshot 1]()
-![Project 2 Screenshot 2]()
-
 ### Project 3: meal App
-
-Screenshots:
-![Project 3 Screenshot 1]()
-![Project 3 Screenshot 2]()
 
 ## How to Run the Projects
 
@@ -36,5 +24,4 @@ To run any of the Flutter projects in this repository, follow these steps:
 
    ```bash
    flutter pub get
-   ```bash
    flutter run

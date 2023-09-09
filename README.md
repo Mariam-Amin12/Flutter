@@ -1,6 +1,6 @@
 ## Flutter Projects Showcase
 
-Welcome to the Flutter Projects Showcase! This repository contains a collection of Flutter projects developed by # Mariam Amin. Each project is designed to showcase different features and capabilities of Flutter.
+Welcome to the Flutter Projects Showcase! This repository contains a collection of Flutter projects developed by Mariam Amin. Each project is designed to showcase different features and capabilities of Flutter.
 
 ## Projects
 

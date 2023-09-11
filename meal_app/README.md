@@ -12,11 +12,8 @@ This is a Flutter app that allows users to explore different meals, view their d
 - **Settings Screen:** Allows users to customize the app's behavior with various filters, including vegan, lactose-free, vegetarian, gluten-free, and dark mode.
 
 ## Screenshots
-
-Include relevant screenshots of your app here to give users a visual preview.
-
-## Getting Started
-
-To run the app on your local machine, you need to have Flutter installed. Then, follow these steps:
-
-1. Clone the repository:
+![Screenshot 2023-09-11 200854](https://github.com/Mariam-Amin12/Flutter/assets/128838373/29fff5df-caf9-4324-a9e5-06102e80ccad)
+![Screenshot 2023-09-11 200944](https://github.com/Mariam-Amin12/Flutter/assets/128838373/a97780c1-0d97-4a5a-903c-f895d54a25b4)
+![Screenshot 2023-09-11 201017](https://github.com/Mariam-Amin12/Flutter/assets/128838373/343674c9-f534-41cd-b082-6cb32dbed251)
+![Screenshot 2023-09-11 201029](https://github.com/Mariam-Amin12/Flutter/assets/128838373/8f3680fa-5304-482e-a54d-d48f9f74babb)
+![Screenshot 2023-09-11 201044](https://github.com/Mariam-Amin12/Flutter/assets/128838373/23870e7f-6387-4056-a30e-6a9d3aacd345)

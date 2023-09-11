@@ -12,18 +12,10 @@ The Home screen is the initial screen that users see when they open the app. use
 
 The Result screen displays the calculated BMI based on the user's input from the Home screen. It also provides a feedback message indicating the user's BMI category (underweight, normal weight, overweight, or obese).
 
-## Installation
 
-To run the BMI App on your device, follow these steps:
 
-1. Make sure you have Flutter installed. If not, refer to the [official Flutter installation guide](https://flutter.dev/docs/get-started/install) for detailed instructions.
 
-2. Clone the repository or download the source code.
 
-3. Open a terminal and navigate to the project directory.
-
-4. Run the following command to fetch the project dependencies:
-
-   ```bash
-   flutter pub get
-   flutter run
+## Screenshots
+![Screenshot 2023-09-11 202028](https://github.com/Mariam-Amin12/Flutter/assets/128838373/8006cdac-ec98-4e13-a544-0081c6f8ef75)
+![Screenshot 2023-09-11 202101](https://github.com/Mariam-Amin12/Flutter/assets/128838373/08c522a8-dc0a-4a2d-b423-0124dcc987d9)
